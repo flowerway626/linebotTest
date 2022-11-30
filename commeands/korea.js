@@ -19,7 +19,7 @@ export default async (event) => {
       }
     })
     const $ = cheerio.load(data)
-    event.reply($('.release_movie_name a').attr('href'))
+    console.log($('.release_movie_name a').text())
     // const dramas = []
     // if ($('.box_inner').find('ul').text() !== '') {
     // $('.category-list li').each(function () {
@@ -47,7 +47,7 @@ export default async (event) => {
     // event.reply('查無資料，請更換檢索條件')
     // return dramaNums
   } catch (error) {
-    event.reply('發生錯誤，請稍後再試11')
+    console.log('發生錯誤，請稍後再試11')
     console.error(error)
   }
 }
