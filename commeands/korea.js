@@ -14,18 +14,18 @@ export default async (event) => {
     // encodeURI
     const { data } = await axios.get(url)
     const $ = cheerio.load(data, { decodeEntities: false })
-    console.log($.html())
+    console.log($('.category-list li').find('.movie_foto img').attr('src'))
     const dramas = []
     // if ($('.box_inner').find('ul').text() !== '') {
-    $('.category-list li').each(function () {
-      // const replyFlex = JSON.parse(JSON.stringify(flex))
-      // replyFlex.body.contents[0].url = $(this).find('.movie_foto img').attr('src')
-      // dramas.push($(this).find('.movie_foto img').attr('src'))
-      // replyFlex.body.contents[0].action.text = $(this).find('.movielist_info h2').text().trim()
-      // replyFlex.body.contents[2].contents[0].contents[0].contents[0].text = $(this).find('.movielist_info h2').text().trim()
-      // replyFlex.body.contents[2].contents[0].contents[1].contents[0].contents[0].text = $(this).find('.movielist_info .season').text().trim()
-      dramas.push($(this).find('.movie_foto img').attr('src'))
-    })
+    // $('.category-list li').each(function () {
+    // const replyFlex = JSON.parse(JSON.stringify(flex))
+    // replyFlex.body.contents[0].url = $(this).find('.movie_foto img').attr('src')
+    // dramas.push($(this).find('.movie_foto img').attr('src'))
+    // replyFlex.body.contents[0].action.text = $(this).find('.movielist_info h2').text().trim()
+    // replyFlex.body.contents[2].contents[0].contents[0].contents[0].text = $(this).find('.movielist_info h2').text().trim()
+    // replyFlex.body.contents[2].contents[0].contents[1].contents[0].contents[0].text = $(this).find('.movielist_info .season').text().trim()
+    dramas.push($('.category-list li').find('.movie_foto img').attr('src'))
+    // })
     console.log(dramas)
     // const reply = {
     //   type: 'flex',

@@ -16,6 +16,7 @@ const bot = linebot({
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 })
 
+korea()
 // // message = TextSendMessage(text = '要傳送的文字訊息')
 // const countrys = ['台灣', '韓國', '中國', '美國', '日本', '英國', '泰國', '香港', '西班牙', '法國']
 bot.on('message', event => {
