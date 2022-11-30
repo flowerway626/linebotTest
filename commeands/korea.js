@@ -14,8 +14,7 @@ export default async (event) => {
     // encodeURI
     const { data } = await axios.get('https://movies.yahoo.com.tw/movie_thisweek.html')
     const $ = cheerio.load(data)
-    console.log($.html())
-    console.log($('.release_movie_name a').attr('href'))
+    event.reply($('.release_movie_name a').attr('href'))
     // const dramas = []
     // if ($('.box_inner').find('ul').text() !== '') {
     // $('.category-list li').each(function () {
