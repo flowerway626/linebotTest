@@ -12,7 +12,12 @@ export default async (event) => {
     // encodeURI
     // const url = 'https://movies.yahoo.com.tw/category.html?region_id=%E9%9F%93%E5%9C%8B&type_id=1'
     // encodeURI
-    const { data } = await axios.get('https://movies.yahoo.com.tw/movie_thisweek.html')
+    const { data } = await axios.get('https://movies.yahoo.com.tw/movie_thisweek.html', {
+      headers: {
+        'Content-Type': 'text/html',
+        charset: 'utf-8'
+      }
+    })
     const $ = cheerio.load(data)
     event.reply($('.release_movie_name a').attr('href'))
     // const dramas = []
