@@ -12,11 +12,11 @@ export default async (event) => {
     // encodeURI
     // const url = 'https://movies.yahoo.com.tw/category.html?region_id=%E9%9F%93%E5%9C%8B&type_id=1'
     // encodeURI
-    const { data } = await axios.get(encodeURI('https://movies.yahoo.com.tw/category.html?region_id=韓國&type_id=1'))
+    const { data } = await axios.get('https://movies.yahoo.com.tw/movie_thisweek.html')
     const $ = cheerio.load(data)
     console.log($.html())
-    console.log($('.category-list li').find('.movie_foto img').attr('src'))
-    const dramas = []
+    console.log($('.release_movie_name a').attr('href'))
+    // const dramas = []
     // if ($('.box_inner').find('ul').text() !== '') {
     // $('.category-list li').each(function () {
     // const replyFlex = JSON.parse(JSON.stringify(flex))
@@ -25,9 +25,9 @@ export default async (event) => {
     // replyFlex.body.contents[0].action.text = $(this).find('.movielist_info h2').text().trim()
     // replyFlex.body.contents[2].contents[0].contents[0].contents[0].text = $(this).find('.movielist_info h2').text().trim()
     // replyFlex.body.contents[2].contents[0].contents[1].contents[0].contents[0].text = $(this).find('.movielist_info .season').text().trim()
-    dramas.push($('.category-list li').find('.movie_foto img').attr('src'))
+    // dramas.push($('.category-list li').find('.movie_foto img').attr('src'))
     // })
-    console.log(dramas)
+    // console.log(dramas)
     // const reply = {
     //   type: 'flex',
     //   altText: '排行查詢結果',
