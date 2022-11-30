@@ -9,17 +9,18 @@ export default async () => {
     // const country = event.message.text.substr(0, 2)
     // let sort = ''
     // event.message.text.includes('人氣') ? sort = '&sort=popular' : sort = ''
-    const url = encodeURI('https://movies.yahoo.com.tw/category.html?region_id=%E9%9F%93%E5%9C%8B&type_id=1')
+    // encodeURI
+    const url = 'https://movies.yahoo.com.tw/category.html?region_id=%E9%9F%93%E5%9C%8B&type_id=1'
     // encodeURI
     const { data } = await axios.get(url)
-    const $ = cheerio.load(data)
-    // console.log($)
+    const $ = cheerio.load(data, { decodeEntities: false })
+    console.log($.html())
     const dramas = []
     if ($('.box_inner').find('ul').text() !== '') {
       $('.category-list li').each(function (i) {
         // const replyFlex = JSON.parse(JSON.stringify(flex))
         // replyFlex.body.contents[0].url = $(this).find('.movie_foto img').attr('src')
-        dramas.push($(this).find('.movie_foto img').attr('src'))
+        // dramas.push($(this).find('.movie_foto img').attr('src'))
         // replyFlex.body.contents[0].action.text = $(this).find('.movielist_info h2').text().trim()
         // replyFlex.body.contents[2].contents[0].contents[0].contents[0].text = $(this).find('.movielist_info h2').text().trim()
         // replyFlex.body.contents[2].contents[0].contents[1].contents[0].contents[0].text = $(this).find('.movielist_info .season').text().trim()
