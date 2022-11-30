@@ -1,11 +1,14 @@
 import 'dotenv/config'
 import linebot from 'linebot'
+import express from 'express'
+
 import korea from './commeands/korea.js'
 // import drama from './commeands/drama.js'
 // import flexPopular from './flexs/flexPopular.js'
 // import flexNew from './flexs/flexNew.js'
 
 // process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0
+const app = express()
 
 const bot = linebot({
   channelId: process.env.CHANNEL_ID,
@@ -31,6 +34,14 @@ bot.on('message', event => {
   //   }
 })
 
-bot.listen('/', process.env.PORT || 3000, () => {
+const linebotParser = bot.parser()
+
+app.post('/', linebotParser)
+
+app.get('/', (req, res) => {
+  res.status(200).send('ok')
+})
+
+app.listen(process.env.PORT || 3000, () => {
   console.log('動茲動呀動茲動')
 })
