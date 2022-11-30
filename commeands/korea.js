@@ -18,7 +18,9 @@ export default async (event) => {
         charset: 'utf-8'
       }
     })
+    console.log(data)
     const $ = cheerio.load(data)
+    console.log($)
     console.log($('.release_movie_name a').text())
     // const dramas = []
     // if ($('.box_inner').find('ul').text() !== '') {
