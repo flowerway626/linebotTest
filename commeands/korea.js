@@ -10,10 +10,11 @@ export default async (event) => {
     // let sort = ''
     // event.message.text.includes('人氣') ? sort = '&sort=popular' : sort = ''
     // encodeURI
-    const url = 'https://movies.yahoo.com.tw/category.html?region_id=%E9%9F%93%E5%9C%8B&type_id=1'
+    // const url = 'https://movies.yahoo.com.tw/category.html?region_id=%E9%9F%93%E5%9C%8B&type_id=1'
     // encodeURI
-    const { data } = await axios.get(url)
-    const $ = cheerio.load(data, { decodeEntities: false })
+    const { data } = await axios.get(encodeURI('https://movies.yahoo.com.tw/category.html?region_id=韓國&type_id=1'))
+    const $ = cheerio.load(data)
+    console.log($.html())
     console.log($('.category-list li').find('.movie_foto img').attr('src'))
     const dramas = []
     // if ($('.box_inner').find('ul').text() !== '') {
