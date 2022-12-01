@@ -12,16 +12,11 @@ export default async (event) => {
     // encodeURI
     // const url = 'https://movies.yahoo.com.tw/category.html?region_id=%E9%9F%93%E5%9C%8B&type_id=1'
     // encodeURI
-    const { data } = await axios.get('https://movies.yahoo.com.tw/movie_thisweek.html', {
-      headers: {
-        'Content-Type': 'text/html',
-        charset: 'utf-8'
-      }
-    })
+    const { data } = await axios.get('https://wdaweb.github.io/')
     console.log(data)
     const $ = cheerio.load(data)
     console.log($)
-    console.log($('.release_movie_name a').text())
+    console.log($('#general .card').find('.card-title').text().trim())
     // const dramas = []
     // if ($('.box_inner').find('ul').text() !== '') {
     // $('.category-list li').each(function () {
