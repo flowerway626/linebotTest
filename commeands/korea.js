@@ -13,8 +13,9 @@ export default async (event) => {
     // const url = 'https://movies.yahoo.com.tw/category.html?region_id=%E9%9F%93%E5%9C%8B&type_id=1'
     // encodeURI
     const { data } = await axios.get('https://movies.yahoo.com.tw/movie_intheaters.html', {
-      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
-      'content-type': 'text/html; charset=UTF-8'
+      // 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36',
+      // 'content-type': 'text/html; charset=UTF-8',
+      encoding: null
     })
     console.log(data)
     const $ = cheerio.load(data)
