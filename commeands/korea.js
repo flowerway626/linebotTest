@@ -1,6 +1,6 @@
 import axios from 'axios'
 import * as cheerio from 'cheerio'
-// import writejson from '../utils/writejson.js'
+import writejson from '../utils/writejson.js'
 // import flex from '../flexs/flex.js'
 
 export default async (event) => {
@@ -12,11 +12,11 @@ export default async (event) => {
     // encodeURI
     // const url = 'https://movies.yahoo.com.tw/category.html?region_id=%E9%9F%93%E5%9C%8B&type_id=1'
     // encodeURI
-    const { data } = await axios.get('https://wdaweb.github.io/')
+    const { data } = await axios.get('https://movies.yahoo.com.tw/category.html?region_id=%E9%9F%93%E5%9C%8B&type_id=1')
     console.log(data)
     const $ = cheerio.load(data)
-    console.log($)
-    console.log($('#general .card').find('.card-title').text().trim())
+    console.log($.html())
+    console.log($('.category-list li').eq(1).find('.movielist_info h2').text().trim())
     // const dramas = []
     // if ($('.box_inner').find('ul').text() !== '') {
     // $('.category-list li').each(function () {
@@ -39,7 +39,7 @@ export default async (event) => {
     // }
 
     // event.reply(reply)
-    // writejson(reply, 'dramas')
+    writejson($.html(), 'dramas')
     // } else console.log('失敗')
     // event.reply('查無資料，請更換檢索條件')
     // return dramaNums

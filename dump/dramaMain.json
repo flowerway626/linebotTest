@@ -1,0 +1,258 @@
+{
+  "type": "flex",
+  "altText": "影劇查詢結果",
+  "contents": {
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "vertical",
+              "margin": "lg",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "image",
+                  "url": "https://movies.yahoo.com.tw/i/o/production/movies/October2022/1As3jU5yk4Qr14NoIMoo-800x1144.jpg",
+                  "aspectMode": "cover",
+                  "size": "full",
+                  "aspectRatio": "9:12"
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "filler"
+                    },
+                    {
+                      "type": "text",
+                      "text": "謝幕：樹立而死",
+                      "size": "xl",
+                      "weight": "bold",
+                      "color": "#ffffff"
+                    },
+                    {
+                      "type": "filler"
+                    }
+                  ],
+                  "height": "40px"
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "播出日期",
+                      "color": "#E4F2ED",
+                      "size": "sm",
+                      "flex": 2
+                    },
+                    {
+                      "type": "text",
+                      "text": "2022-10-31",
+                      "wrap": true,
+                      "color": "#ffffff",
+                      "size": "sm",
+                      "flex": 5
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "總集數",
+                      "color": "#E4F2ED",
+                      "size": "sm",
+                      "flex": 2
+                    },
+                    {
+                      "type": "text",
+                      "text": "16集",
+                      "wrap": true,
+                      "color": "#ffffff",
+                      "size": "sm",
+                      "flex": 5
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "IMDb分數",
+                      "color": "#E4F2ED",
+                      "size": "sm",
+                      "flex": 2
+                    },
+                    {
+                      "type": "text",
+                      "text": "-",
+                      "wrap": true,
+                      "color": "#ffffff",
+                      "size": "sm",
+                      "flex": 5
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "導演",
+                      "color": "#E4F2ED",
+                      "size": "sm",
+                      "flex": 2
+                    },
+                    {
+                      "type": "text",
+                      "text": "尹尚浩",
+                      "wrap": true,
+                      "color": "#ffffff",
+                      "size": "sm",
+                      "flex": 5
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "編劇",
+                      "color": "#E4F2ED",
+                      "size": "sm",
+                      "flex": 2
+                    },
+                    {
+                      "type": "text",
+                      "text": "趙成傑",
+                      "wrap": true,
+                      "color": "#ffffff",
+                      "size": "sm",
+                      "flex": 5
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "主演",
+                      "color": "#E4F2ED",
+                      "size": "sm",
+                      "flex": 2
+                    },
+                    {
+                      "type": "text",
+                      "wrap": true,
+                      "color": "#ffffff",
+                      "size": "sm",
+                      "flex": 5,
+                      "text": "高斗心、姜河那、河智苑、權相佑、成東鎰"
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "baseline",
+                  "spacing": "sm",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "串流平台",
+                      "color": "#E4F2ED",
+                      "size": "sm",
+                      "flex": 2
+                    },
+                    {
+                      "type": "text",
+                      "text": "愛奇藝",
+                      "wrap": true,
+                      "color": "#ffffff",
+                      "size": "sm",
+                      "flex": 5
+                    }
+                  ]
+                },
+                {
+                  "type": "box",
+                  "layout": "vertical",
+                  "contents": [
+                    {
+                      "type": "text",
+                      "text": "劇情簡介",
+                      "align": "center",
+                      "size": "md",
+                      "color": "#E4F2ED",
+                      "offsetTop": "3px"
+                    }
+                  ],
+                  "height": "30px",
+                  "borderWidth": "1px",
+                  "borderColor": "#999999",
+                  "action": {
+                    "type": "message",
+                    "label": "action",
+                    "text": "《謝幕：樹立而死》是韓國KBS2在2022年推出的連續劇，由《月升之江》導演尹尚浩和電影《菜鳥警校生》的編劇趙成傑合作打造，卡司陣容堅強，集結了高斗心、姜河那、河智苑、權相佑、成東鎰等人主演。劇情講述一個男人為了實現來自朝鮮奶奶的最後願望，決定假扮她的孫子，完成她人生心願，發展出一段動人故事。..."
+                  },
+                  "offsetEnd": "0px",
+                  "justifyContent": "center",
+                  "alignItems": "center"
+                }
+              ],
+              "paddingAll": "0px"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "韓國",
+                  "color": "#456173",
+                  "align": "center",
+                  "size": "md",
+                  "offsetTop": "3px",
+                  "weight": "bold"
+                }
+              ],
+              "position": "absolute",
+              "backgroundColor": "#E4F2ED",
+              "width": "55px",
+              "height": "28px",
+              "cornerRadius": "20px",
+              "offsetTop": "10px",
+              "offsetStart": "15px"
+            }
+          ],
+          "backgroundColor": "#456173",
+          "paddingTop": "5px",
+          "paddingBottom": "10px"
+        }
+      }
+    ]
+  }
+}
